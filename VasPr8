@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    // №1
+    ofstream fout;
+    fout.open("text.txt");
+    fout << "ABC DEF GHI JKL MNO";
+    fout.close();
+    ifstream fin;
+    fin.open("text.txt");
+    char buff[150];
+    int i=0;
+    while (fin != 0)
+    {
+        fin >> buff;
+        cout << buff << endl;
+    }
+    fin.close();
+
+    //№2
+    fout.open("test2.txt");
+    cin >> buff;
+    fout << buff;
+    fout.close();
+    return 0;
+}
